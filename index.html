@@ -11,61 +11,49 @@
 
 <body>
     <main class="container text-center">
-        <h1>Conversor de moedas</h1>
+        <h1>Conversor de Reais</h1>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
         <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Digite um valor" aria-label="Recipient's username"
+            <input id="reais" type="number" class="form-control" placeholder="Digite um valor em Reais" aria-label="Recipient's username"
                 aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text">Dolar $</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" disabled>
+            <span class="input-group-text">Dólar $</span>
+            <input id="dolar" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text">Euro $</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input id="euro" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text">Libras $</span>
-            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+            <input id="libras" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
         </div>
         <div class="input-group mb-3">
             <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                onclick="verificar()">Verificar</button>
-        </div>
-        <div class="row g-2">
-            <div class="col-md">
-                <div class="form-floating">
-                    <select class="form-select" id="medidas1">
-                        <option hidden>Selecione a Medida</option>
-                        <option value="Mg">Milígrama</option>
-                        <option value="g">Grama</option>
-                        <option value="Kg">Quilograma</option>
-                        <option value="t">Tonelada</option>
-                    </select>
-                    <label for="floatingSelectGrid">De:</label>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="form-floating">
-                    <select class="form-select" id="medidas2">
-                        <option hidden>Selecione a Medida</option>
-                        <option value="t">Tonelada</option>
-                        <option value="Kg">Quilograma</option>
-                        <option value="g">Grama</option>
-                        <option value="Mg">Milígrama</option>
-                    </select>
-                    <label for="floatingSelectGrid">Para:</label>
-                </div>
-            </div>
+                onclick="Converter()">Converter</button>
         </div>
 </body>
 </main>
+<script>
+    function Converter(){
+        var BRL = document.getElementById("reais").value;
+        var USD = document.getElementById("dolar").value;
+        var EUR = document.getElementById("euro").value;
+        var GBP = document.getElementById("libras").value;
+
+        if(){
+
+        }
+        document.getElementById("resultado").innerText = "Seu IMC: "+imc.toFixed(2)+"\n\n"+"Classificação: "+classificacao+"\n\n"+"Sexo: "+sexo;
+
+    }
+</script>
+
 
 </html>
