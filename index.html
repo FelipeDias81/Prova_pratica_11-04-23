@@ -38,23 +38,20 @@
         </div>
         <div class="input-group">
             <span class="input-group-text">Valores:</span>
-            <textarea id="resposta" class="form-control" aria-label="With textarea" disabled></textarea>
+            <textarea id="valores" class="form-control" aria-label="With textarea" disabled></textarea>
         </div>
 </body>
 </main>
 <script>
     function Converter() {
-        var BRL = document.getElementById("reais").value;
-        var USD = document.getElementById("dolar").value;
-        var EUR = document.getElementById("euro").value;
-        var GBP = document.getElementById("libras").value;
+        var BRL = parseFloat(document.getElementById("reais").value);
+        var USD = parseFloat(document.getElementById("dolar").value);
+        var EUR = parseFloat(document.getElementById("euro").value);
+        var GBP = parseFloat(document.getElementById("libras").value);
+        var resposta = document.getElementById("valores");
 
-        if (BRL ==) {
-
-        }
-        document.getElementById("resposta").innerText = "Seu IMC: " + imc.toFixed(2) + "\n\n" + "Classificação: " + classificacao + "\n\n" + "Sexo: " + sexo;
+        valores.innerText = "Valor1:" + (BRL / USD).toFixed(2) + "\n\n" + "Valor2: " + (BRL / EUR).toFixed(2) + "\n\n" + "Valor3: " + (BRL / GBP).toFixed(2);
     }
 </script>
-
 
 </html>
