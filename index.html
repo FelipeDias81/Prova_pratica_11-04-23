@@ -16,8 +16,10 @@
             integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
             crossorigin="anonymous"></script>
         <div class="input-group mb-3">
-            <input id="reais" type="number" class="form-control" placeholder="Digite um valor em Reais" aria-label="Recipient's username"
-                aria-describedby="button-addon2">
+            <input id="reais" type="number" class="form-control" placeholder="Digite um valor em Reais"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
+                onclick="Converter()">Converter</button>
         </div>
         <div class="input-group mb-3">
             <span class="input-group-text">Dólar $</span>
@@ -25,33 +27,32 @@
             <span class="input-group-text">.00</span>
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text">Euro $</span>
+            <span class="input-group-text">Euro €</span>
             <input id="euro" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
         </div>
         <div class="input-group mb-3">
-            <span class="input-group-text">Libras $</span>
+            <span class="input-group-text">Libras £</span>
             <input id="libras" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
             <span class="input-group-text">.00</span>
         </div>
-        <div class="input-group mb-3">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2"
-                onclick="Converter()">Converter</button>
+        <div class="input-group">
+            <span class="input-group-text">Valores:</span>
+            <textarea id="resposta" class="form-control" aria-label="With textarea" disabled></textarea>
         </div>
 </body>
 </main>
 <script>
-    function Converter(){
+    function Converter() {
         var BRL = document.getElementById("reais").value;
         var USD = document.getElementById("dolar").value;
         var EUR = document.getElementById("euro").value;
         var GBP = document.getElementById("libras").value;
 
-        if(){
+        if (BRL ==) {
 
         }
-        document.getElementById("resultado").innerText = "Seu IMC: "+imc.toFixed(2)+"\n\n"+"Classificação: "+classificacao+"\n\n"+"Sexo: "+sexo;
-
+        document.getElementById("resposta").innerText = "Seu IMC: " + imc.toFixed(2) + "\n\n" + "Classificação: " + classificacao + "\n\n" + "Sexo: " + sexo;
     }
 </script>
 
